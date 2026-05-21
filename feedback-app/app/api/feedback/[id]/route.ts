@@ -8,10 +8,11 @@ export async function PATCH(
   try {
     const { id } = await params;
     const body = await req.json();
-    const updated = updateFeedback(id, body);
+    const updated = await updateFeedback(id, body);
     if (!updated) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     return NextResponse.json(updated);
-  } catch {
+  } catch (err) {
+    console.error('[PATCH /api/feedback]', err);
     return NextResponse.json({ error: 'Failed to update' }, { status: 500 });
   }
 }
@@ -22,10 +23,10 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params;
-    const deleted = deleteFeedback(id);
-    if (!deleted) return NextResponse.json({ error: 'Not found' }, { status: 404 });
+    await deleteFeedback(id);
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error('[DELETE /api/feedback]', err);
     return NextResponse.json({ error: 'Failed to delete' }, { status: 500 });
   }
 }

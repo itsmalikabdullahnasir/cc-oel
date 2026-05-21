@@ -1,0 +1,93 @@
+[
+  {
+    "id": "79ec635c-6fc1-4904-b78d-a46ca99f9a31",
+    "content": "This is a test submission from curl!",
+    "category": "general",
+    "isReviewed": false,
+    "createdAt": "2026-05-21T07:45:40.249Z"
+  },
+  {
+    "id": "seed-1",
+    "content": "The new dashboard design is absolutely stunning! The dark mode is exactly what I needed. Really love the attention to detail throughout the entire interface.",
+    "category": "compliment",
+    "isReviewed": true,
+    "createdAt": "2026-05-21T07:17:42.795Z"
+  },
+  {
+    "id": "seed-2",
+    "content": "When exporting data as CSV the download sometimes fails silently without any error message. Reproducible on Chrome 120 and Firefox 121.",
+    "category": "bug",
+    "isReviewed": false,
+    "createdAt": "2026-05-21T06:12:42.795Z"
+  },
+  {
+    "id": "seed-3",
+    "content": "Would love to see a native mobile app! The web version is great but a dedicated iOS/Android experience would make this perfect for on-the-go use.",
+    "category": "feature",
+    "isReviewed": true,
+    "createdAt": "2026-05-20T05:42:42.795Z"
+  },
+  {
+    "id": "seed-4",
+    "content": "The search functionality could be improved. It would be really helpful if it searched through all metadata fields, not just the content body.",
+    "category": "suggestion",
+    "isReviewed": false,
+    "createdAt": "2026-05-20T01:42:42.795Z"
+  },
+  {
+    "id": "seed-5",
+    "content": "Page load times feel a bit slow sometimes, especially on the analytics section. Could we get some optimization here?",
+    "category": "complaint",
+    "isReviewed": true,
+    "createdAt": "2026-05-19T05:42:42.795Z"
+  },
+  {
+    "id": "seed-6",
+    "content": "Can you add a light mode option? Some users in our team prefer lighter interfaces for accessibility reasons.",
+    "category": "feature",
+    "isReviewed": false,
+    "createdAt": "2026-05-19T01:42:42.795Z"
+  },
+  {
+    "id": "seed-7",
+    "content": "The analytics section is incredibly useful for our team. The visualizations are clear and the data exports work great. Keep up the excellent work!",
+    "category": "compliment",
+    "isReviewed": true,
+    "createdAt": "2026-05-18T07:42:42.795Z"
+  },
+  {
+    "id": "seed-8",
+    "content": "Email notifications seem to be broken — not receiving alerts even with notifications enabled in account settings.",
+    "category": "bug",
+    "isReviewed": false,
+    "createdAt": "2026-05-18T01:42:42.795Z"
+  },
+  {
+    "id": "seed-9",
+    "content": "Adding keyboard shortcuts for common actions would be amazing. Power users would really benefit from Cmd+K style navigation.",
+    "category": "suggestion",
+    "isReviewed": true,
+    "createdAt": "2026-05-17T07:42:42.795Z"
+  },
+  {
+    "id": "seed-10",
+    "content": "The API documentation is thorough and well-structured. Integration was straightforward and everything worked as described.",
+    "category": "general",
+    "isReviewed": true,
+    "createdAt": "2026-05-16T07:42:42.795Z"
+  },
+  {
+    "id": "seed-11",
+    "content": "Bulk operations would be a game changer. Selecting multiple feedback items and acting on them all at once would save so much time.",
+    "category": "feature",
+    "isReviewed": false,
+    "createdAt": "2026-05-16T02:42:42.795Z"
+  },
+  {
+    "id": "seed-12",
+    "content": "Pricing information is hard to find. A clearer breakdown of what is included in each plan would help with the purchase decision.",
+    "category": "complaint",
+    "isReviewed": true,
+    "createdAt": "2026-05-15T07:42:42.795Z"
+  }
+]

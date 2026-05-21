@@ -3,54 +3,52 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-background: #09090b;
-  --color-foreground: #fafafa;
 }
 
+/* ── Base ── */
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
 }
 
 body {
-  background-color: #09090b;
-  color: #fafafa;
+  background-color: #0d0e1a;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99, 102, 241, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(139, 92, 246, 0.06) 0%, transparent 60%);
+  color: #e2e4f0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 9999px; }
-::-webkit-scrollbar-thumb:hover { background: #52525b; }
+/* ── Scrollbar ── */
+::-webkit-scrollbar          { width: 5px; height: 5px; }
+::-webkit-scrollbar-track    { background: transparent; }
+::-webkit-scrollbar-thumb    { background: #3b3d5c; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #525480; }
 
-/* Selection */
+/* ── Selection ── */
 ::selection { background: rgba(139, 92, 246, 0.35); color: #fff; }
 
+/* ── Focus ── */
 *:focus { outline: none; }
 
+/* ── Shimmer skeleton ── */
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
+  0%   { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
-
 .shimmer {
-  background: linear-gradient(90deg, #27272a 25%, #3f3f46 37%, #27272a 63%);
+  background: linear-gradient(90deg, #1e1f35 25%, #2a2c4a 37%, #1e1f35 63%);
   background-size: 400% 100%;
   animation: shimmer 1.4s ease infinite;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-22px) scale(1.04); }
-}
+/* ── Floating orb animations ── */
+@keyframes float          { 0%,100% { transform: translateY(0)    scale(1);    } 50% { transform: translateY(-22px) scale(1.04); } }
+@keyframes float-delayed  { 0%,100% { transform: translateY(0)    scale(1);    } 50% { transform: translateY( 18px) scale(0.97); } }
 
-@keyframes float-delayed {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(18px) scale(0.97); }
-}
-
-.orb-float { animation: float 9s ease-in-out infinite; }
+.orb-float         { animation: float         9s  ease-in-out infinite; }
 .orb-float-delayed { animation: float-delayed 11s ease-in-out infinite; }
-.orb-float-slow { animation: float 15s ease-in-out infinite; }
+.orb-float-slow    { animation: float         15s ease-in-out infinite; }

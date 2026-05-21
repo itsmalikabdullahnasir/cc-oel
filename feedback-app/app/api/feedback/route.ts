@@ -4,9 +4,10 @@ import { getAllFeedback, addFeedback } from '@/lib/db';
 
 export async function GET() {
   try {
-    const feedback = getAllFeedback();
+    const feedback = await getAllFeedback();
     return NextResponse.json(feedback);
-  } catch {
+  } catch (err) {
+    console.error('[GET /api/feedback]', err);
     return NextResponse.json({ error: 'Failed to fetch feedback' }, { status: 500 });
   }
 }
@@ -19,12 +20,11 @@ export async function POST(req: Request) {
     if (!content?.trim() || !category) {
       return NextResponse.json({ error: 'Content and category are required' }, { status: 400 });
     }
-
     if (content.trim().length > 500) {
       return NextResponse.json({ error: 'Content must be 500 characters or fewer' }, { status: 400 });
     }
 
-    const feedback = addFeedback({
+    const feedback = await addFeedback({
       id: uuidv4(),
       content: content.trim(),
       category,
@@ -33,7 +33,8 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json(feedback, { status: 201 });
-  } catch {
+  } catch (err) {
+    console.error('[POST /api/feedback]', err);
     return NextResponse.json({ error: 'Failed to submit feedback' }, { status: 500 });
   }
 }

@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "feedback-app",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "feedback-app"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}
